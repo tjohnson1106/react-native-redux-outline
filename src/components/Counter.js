@@ -3,27 +3,15 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { connect } from "react-redux";
 
 class Counter extends Component {
-  increaseCounter = () => {
-    this.setState({
-      counter: this.state.counter + 1
-    });
-  };
-
-  decreaseCounter = () => {
-    this.setState({
-      counter: this.state.counter - 1
-    });
-  };
-
   render() {
     return (
       <View style={styles.root}>
         <View style={styles.counter}>
-          <TouchableOpacity onPress={() => this.increaseCounter()}>
+          <TouchableOpacity onPress={() => this.props.increaseCounter()}>
             <Text style={styles.counterText}>Increase</Text>
           </TouchableOpacity>
           <Text>{this.props.counter}</Text>
-          <TouchableOpacity onPress={() => this.decreaseCounter()}>
+          <TouchableOpacity onPress={() => this.props.decreaseCounter()}>
             <Text style={styles.counterText}>Decrease</Text>
           </TouchableOpacity>
         </View>
