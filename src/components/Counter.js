@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleShee, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 class Counter extends Component {
   state = {
@@ -23,9 +23,9 @@ class Counter extends Component {
       <View style={styles.root}>
         <View style={styles.counter}>
           <TouchableOpacity onPress={() => this.increaseCounter}>
-            <Text>Increase</Text>
+            <Text style={styles.counterText}>Increase</Text>
           </TouchableOpacity>
-          <Text style={styles.counterText}>{this.state.counter}</Text>
+          <Text>{this.state.counter}</Text>
           <TouchableOpacity onPress={() => this.decreaseCounter}>
             <Text style={styles.counterText}>Decrease</Text>
           </TouchableOpacity>
