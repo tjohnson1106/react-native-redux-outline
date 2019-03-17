@@ -6,7 +6,7 @@ import Counter from "./src/components/Counter";
 import { reducer } from "./src/reducers";
 
 // Store -> holds state single source of truth(only one state)
-// Action -> state can be modified with actions
+// Action -> state can be modified with actions (all functions must be pure functions)
 // Dispatcher -> action needs to be sent by some one - dispensing an action
 // Reducer -> recives the action and modifies the state and gives new state
 // Subscriber ->  listens for state changes (using connect)
